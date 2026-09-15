@@ -166,7 +166,7 @@ An incomplete optional feature is not a reason for rejection. Clearly label unfi
 
 ## How to apply
 
-Submit your repository through [the application form](https://binary.so/rVZvEeJ), or email it to [caygnus@gmail.com](mailto:caygnus@gmail.com).
+Submit your repository through [the submission form](https://binary.so/mWmcQzJ), or email it to [caygnus@gmail.com](mailto:caygnus@gmail.com).
 
 Include your resume and links to products or projects you have worked on or shipped.
 
