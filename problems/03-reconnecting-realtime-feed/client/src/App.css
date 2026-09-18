@@ -1,0 +1,106 @@
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+  color: #111;
+  background: #f5f5f5;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 16px 20px 32px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+h1,
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+h2 {
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.status-dot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.hint,
+.dev-label,
+.empty {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #8b0000;
+  background: #fde8e8;
+  border: 1px solid #f2c0c0;
+  padding: 8px 10px;
+}
+
+code {
+  background: #f0f0f0;
+  padding: 1px 4px;
+}
+
+.update-form,
+.dev-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.update-form input {
+  padding: 8px;
+  font: inherit;
+}
+
+button {
+  font: inherit;
+  padding: 8px 12px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.feed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feed li {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.seq {
+  font-variant-numeric: tabular-nums;
+  min-width: 2.5rem;
+  color: #444;
+}
