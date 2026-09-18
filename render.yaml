@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     rootDir: problems/03-reconnecting-realtime-feed/server
-    buildCommand: npm ci
+    buildCommand: npm install --omit=dev
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:

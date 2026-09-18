@@ -31,13 +31,11 @@ function App() {
         connectionState={connectionState}
         onPublish={publishUpdate}
       />
-      {import.meta.env.DEV ? (
-        <DevControls
-          connectionState={connectionState}
-          onSimulateDisconnect={simulateDisconnect}
-          onReconnect={reconnect}
-        />
-      ) : null}
+      <DevControls
+        connectionState={connectionState}
+        onSimulateDisconnect={simulateDisconnect}
+        onReconnect={reconnect}
+      />
       <h2>Feed</h2>
       <FeedList updates={updates} />
     </main>
