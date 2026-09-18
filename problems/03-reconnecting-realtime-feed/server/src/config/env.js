@@ -14,11 +14,24 @@ function readNumber(name, fallback) {
   return value;
 }
 
+function readOrigins(raw) {
+  const origins = (raw ?? "http://localhost:5173")
+    .split(",")
+    .map((origin) => origin.trim().replace(/\/$/, ""))
+    .filter(Boolean);
+
+  if (origins.length === 0) {
+    throw new Error("CLIENT_ORIGIN must include at least one origin");
+  }
+
+  return origins.length === 1 ? origins[0] : origins;
+}
+
 export function loadEnv() {
   return {
     PORT: readNumber("PORT", 3001),
     MONGODB_URI:
       process.env.MONGODB_URI ?? "mongodb://127.0.0.1:27017/incident-feed",
-    CLIENT_ORIGIN: process.env.CLIENT_ORIGIN ?? "http://localhost:5173",
+    CLIENT_ORIGIN: readOrigins(process.env.CLIENT_ORIGIN),
   };
 }

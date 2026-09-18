@@ -37,7 +37,7 @@ async function main() {
     logger.warn("server_starting_without_mongo");
   }
 
-  httpServer.listen(env.PORT, () => {
+  httpServer.listen(env.PORT, "0.0.0.0", () => {
     logger.info("server_listening", {
       port: env.PORT,
       clientOrigin: env.CLIENT_ORIGIN,

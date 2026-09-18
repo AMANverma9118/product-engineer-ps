@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: incident-realtime-feed
+    runtime: node
+    plan: free
+    rootDir: problems/03-reconnecting-realtime-feed/server
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_ORIGIN
+        sync: false
